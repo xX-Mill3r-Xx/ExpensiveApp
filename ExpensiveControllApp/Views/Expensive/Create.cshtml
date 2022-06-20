@@ -1,44 +1,48 @@
 ﻿@model ExpensiveControllApp.DTOs.CreateExpensiveDTO
 
-<form method="post" class="p-md-5">
+<form method="post" class="form-horizontal">
     <div asp-validation-summary="All" class="text-danger"></div>
-    <div class="row">
-        <div class="col-md-12">
-            <div class="d-grid">
-                <input asp-for="Description" placeholder="Digite a descrição" class="form-cotroll" />
+    <fieldset>
+        <div class="row">
+            <legend>Incluir Nova Despesa</legend>
+            <div class="col-lg-10">
+                <div class="d-grid">
+                    <input asp-for="Description" placeholder="Digite a descrição" class="form-cotroll" />
+                </div>
             </div>
         </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-12">
-            <div class="d-grid">
-                <input asp-for="Date" type="date" placeholder="Digite a data" class="form-cotroll" />
+        <br />
+        <div class="row">
+            <div class="col-md-12">
+                <div class="d-grid">
+                    <input asp-for="Date" type="date" placeholder="Digite a data" class="form-cotroll" />
+                </div>
             </div>
         </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-12">
-            <div class="form-group">
-                <input asp-for="Value" type="number" placeholder="Digite o valor" class="form-cotroll" />
+        <br />
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="d-grid">
+                    <input asp-for="Value" type="number" placeholder="Digite o valor" class="form-cotroll" />
+                </div>
             </div>
         </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-12">
-            <div class="d-grid">
-                <a asp-action="Index" class="btn btn-secondary btn-login text-uppercase fw-bold">Voltar</a>
+        <br />
+        <hr />
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="d-grid">
+                    <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold">Criar</button>
+                </div>
             </div>
         </div>
-    </div>
-    <br />
-    <div class="row">
-        <div class="col-md-12">
-            <div class="d-grid">
-                <button type="submit" class="btn btn-primary btn-login text-uppercase fw-bold">Criar</button>
+        <br />
+        <div class="row">
+            <div class="col-lg-10">
+                <div class="d-grid">
+                    <a asp-action="Index" class="btn btn-primary btn-login text-uppercase fw-bold">Voltar</a>
+                </div>
             </div>
         </div>
-    </div>
+    </fieldset>
 </form>
